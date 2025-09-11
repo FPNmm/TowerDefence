@@ -119,6 +119,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &160016429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1826954320341408132, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: FireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914441556982108353, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: m_Name
+      value: Tower (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,8 +684,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4821814260185642191, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
+      propertyPath: waveSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821814260185642191, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
       propertyPath: spawnInterval
-      value: 3
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 5289534092469910149, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
       propertyPath: m_Name
@@ -683,6 +748,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1826954320341408132, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
+      propertyPath: FireRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4434898378519331309, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3
@@ -740,6 +809,7 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 874900444}
-  - {fileID: 1160878530423285413}
   - {fileID: 2550859693209745677}
+  - {fileID: 1160878530423285413}
   - {fileID: 4507347414303342543}
+  - {fileID: 160016429}
