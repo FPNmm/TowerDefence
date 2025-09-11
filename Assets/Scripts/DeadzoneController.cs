@@ -13,11 +13,12 @@ public class DeadzoneController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       if (other.GetComponent<EnemyController>())
+       EnemyController enemy = other.GetComponent<EnemyController>();
+
+        if (enemy)
        {
             currentHealth -= 1;
-            Destroy(other.gameObject);
-
+            enemy.KillEnemy();
             if (currentHealth == 0) Debug.Log("You Lose!");
        }
     }

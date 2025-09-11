@@ -15,12 +15,13 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (spawnInterval == 0f) SpawnEnemy();
-        else spawnInterval -= Time.deltaTime;
+        if (spawnTime <= 0f) SpawnEnemy();
+        else spawnTime -= Time.deltaTime;
     }
 
     private void SpawnEnemy()
     {
         Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform);
+        spawnTime = spawnInterval;
     }
 }

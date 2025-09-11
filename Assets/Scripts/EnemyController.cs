@@ -17,4 +17,9 @@ public class EnemyController : MonoBehaviour
     {
         transform.position += Vector3.forward * movementSpeed * Time.deltaTime;
     }
+
+    public void KillEnemy()
+    {
+        Destroy(gameObject);
+    }
 }
