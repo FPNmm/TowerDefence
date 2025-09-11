@@ -377,6 +377,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &693025966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5802033883007632507, guid: 0a2c90540c4c39e4c9c109b9e426d74c, type: 3}
+  m_PrefabInstance: {fileID: 550247982837677590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +676,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4821814260185642191, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 693025966}
     - target: {fileID: 5289534092469910149, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
