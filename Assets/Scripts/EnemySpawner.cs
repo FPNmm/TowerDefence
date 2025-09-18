@@ -1,12 +1,16 @@
+using Assets.Scripts;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public TowerBuildingController towerBuildingController;
     public int waveSize;
     public float spawnInterval;
     public GameObject enemyPrefab;
 
     private float spawnTime;
+    private bool isInBuildingPhase = true;
+    private int amountOfEnemiesSpawned;
 
     private void Start()
     {
@@ -15,13 +19,37 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (spawnTime <= 0f) SpawnEnemy();
-        else spawnTime -= Time.deltaTime;
+        switch (isInBuildingPhase)
+        {
+            case true:
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        towerBuildingController.EnterEnemyPhase();
+                        isInBuildingPhase = false;
+                    }
+                    break;
+                }
+            case false:
+                {
+                    if (amountOfEnemiesSpawned >= waveSize)
+                    {
+                        isInBuildingPhase = true;
+                        amountOfEnemiesSpawned = 0;
+                        towerBuildingController.EnterBuildingPhase();
+                    }
+
+                    if (spawnTime <= 0f) SpawnEnemy();
+                    else spawnTime -= Time.deltaTime;
+                    break;
+                }
+        }
     }
 
     private void SpawnEnemy()
     {
         Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform);
         spawnTime = spawnInterval;
+        amountOfEnemiesSpawned++;
     }
 }

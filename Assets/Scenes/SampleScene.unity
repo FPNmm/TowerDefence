@@ -615,6 +615,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
+--- !u!114 &1048717027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8505039618147025236, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
+  m_PrefabInstance: {fileID: 8802645867280541420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28775aef5baf85144bb9185b346e1f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1160878530423285413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -690,12 +701,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4821814260185642191, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
       propertyPath: waveSize
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4821814260185642191, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
       propertyPath: spawnInterval
-      value: 0.49
+      value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 4821814260185642191, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
+      propertyPath: towerBuildingController
+      value: 
+      objectReference: {fileID: 1048717027}
     - target: {fileID: 5289534092469910149, guid: cb5acdc4e6390c840af53397416ce7ff, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
@@ -866,6 +881,10 @@ PrefabInstance:
       propertyPath: towerPrefab
       value: 
       objectReference: {fileID: 669341891}
+    - target: {fileID: 8505039618147025236, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
+      propertyPath: maxTowersPerPhase
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
