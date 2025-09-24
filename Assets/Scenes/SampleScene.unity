@@ -438,11 +438,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!1 &669341891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4914441556982108353, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
-  m_PrefabInstance: {fileID: 4507347414303342543}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,15 +834,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6989731455665254195, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.3100743
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6989731455665254195, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.087141
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6989731455665254195, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6474509
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6989731455665254195, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -880,7 +875,7 @@ PrefabInstance:
     - target: {fileID: 8505039618147025236, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
       propertyPath: towerPrefab
       value: 
-      objectReference: {fileID: 669341891}
+      objectReference: {fileID: 4914441556982108353, guid: 0884e46e54cdd0e4eb35fac426bef79d, type: 3}
     - target: {fileID: 8505039618147025236, guid: 7e9cade3d4d93734a820b4e7ad01cb0a, type: 3}
       propertyPath: maxTowersPerPhase
       value: 2

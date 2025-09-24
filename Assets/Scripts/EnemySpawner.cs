@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public TowerBuildingController towerBuildingController;
-    public int waveSize;
-    public float spawnInterval;
-    public GameObject enemyPrefab;
+    [SerializeField] private TowerBuildingController towerBuildingController;
+    [SerializeField] private int waveSize;
+    [SerializeField] private float spawnInterval;
+    [SerializeField] private GameObject enemyPrefab;
 
     private float spawnTime;
     private bool isInBuildingPhase = true;

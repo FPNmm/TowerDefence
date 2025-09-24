@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DeadzoneController : MonoBehaviour
 {
-    public int health;
+    [SerializeField] private int health;
 
     private int currentHealth;
 

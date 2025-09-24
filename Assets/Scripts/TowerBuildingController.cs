@@ -6,9 +6,9 @@ namespace Assets.Scripts
 {
     public class TowerBuildingController : MonoBehaviour
     {
-        public GameObject towerPrefab;
-        public LayerMask groundLayer;
-        public int maxTowersPerPhase;
+        [SerializeField] private GameObject towerPrefab;
+        [SerializeField] private LayerMask groundLayer;
+        [SerializeField] private int maxTowersPerPhase;
 
         private int towersPlaced;
         private bool canPlaceTowers = true;
@@ -24,8 +24,8 @@ namespace Assets.Scripts
                 if(Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, groundLayer))
                 {
                     Vector3 spawnPos = hit.point;
-                    spawnPos.y += towerPrefab.GetComponent<BoxCollider>().bounds.extents.y;
-                    Instantiate(towerPrefab, hit.point, Quaternion.identity, transform);
+                    spawnPos.y += towerPrefab.GetComponent<BoxCollider>().size.y / 2 * towerPrefab.transform.localScale.y;
+                    Instantiate(towerPrefab, spawnPos, Quaternion.identity, transform);
                     towersPlaced++;
                 }
             }

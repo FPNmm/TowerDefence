@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public float FireRate = 1.0f;
-    public float damage;
+    [SerializeField] private float FireRate = 1.0f;
+    [SerializeField] private float damage;
 
     private float cooldown;
 

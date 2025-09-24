@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float movementSpeed;
+    [SerializeField] private float movementSpeed;
 
     private Vector3 moveDirection;
 
