@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,9 +10,12 @@ namespace Assets.Scripts
         [SerializeField] private GameObject towerPrefab;
         [SerializeField] private LayerMask groundLayer;
         [SerializeField] private int maxTowersPerPhase;
+        [SerializeField] private string logOutput;
 
         private int towersPlaced;
         private bool canPlaceTowers = true;
+
+        private List<TowerController> towerList = new List<TowerController>();
 
         void Update()
         {
@@ -25,7 +29,8 @@ namespace Assets.Scripts
                 {
                     Vector3 spawnPos = hit.point;
                     spawnPos.y += towerPrefab.GetComponent<BoxCollider>().size.y / 2 * towerPrefab.transform.localScale.y;
-                    Instantiate(towerPrefab, spawnPos, Quaternion.identity, transform);
+                    TowerController towerController = Instantiate(towerPrefab, spawnPos, Quaternion.identity, transform).GetComponent<TowerController>();
+                    towerList.Add(towerController);
                     towersPlaced++;
                 }
             }
@@ -40,6 +45,7 @@ namespace Assets.Scripts
         public void EnterEnemyPhase()
         {
             canPlaceTowers = false;
+            Debug.Log(logOutput + towerList.Count);
         }
     }
 }

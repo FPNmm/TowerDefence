@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+public class TowerController : MonoBehaviour
 {
     [SerializeField] private float FireRate = 1.0f;
     [SerializeField] private float damage;

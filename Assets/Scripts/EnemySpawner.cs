@@ -1,4 +1,5 @@
 using Assets.Scripts;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -11,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     private float spawnTime;
     private bool isInBuildingPhase = true;
     private int amountOfEnemiesSpawned;
+
+    private List<EnemyController> enemyList = new List<EnemyController>();
 
     private void Start()
     {
@@ -48,7 +51,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform);
+        EnemyController enemyController = Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform) .GetComponent<EnemyController>();
+        enemyList.Add(enemyController);
+
         spawnTime = spawnInterval;
         amountOfEnemiesSpawned++;
     }
